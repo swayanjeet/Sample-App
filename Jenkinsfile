@@ -5,9 +5,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'nosetests --with-xunit'
+                sh 'nosetests --with-xunit --cover-html'
                 sh 'ls'
-                archiveArtifacts artifacts: '*.xml'
+                archiveArtifacts artifacts: '*.xml, *.html'
             }
         }
     }
