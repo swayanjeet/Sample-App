@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh 'nosetests --with-xunit'
                 sh 'ls'
+                archiveArtifacts artifacts: '*.xml'
             }
         }
     }
