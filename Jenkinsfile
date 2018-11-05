@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh 'nosetests --with-xunit --with-coverage --cover-html'
                 sh 'ls'
-                archiveArtifacts artifacts: '*.xml, *.html'
+                archiveArtifacts artifacts: '*.xml, ./cover/*.html'
             }
         }
     }
