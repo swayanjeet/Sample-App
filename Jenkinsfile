@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'nosetests --with-coverage' 
+                sh 'nosetests --cover-html' 
             }
         }
     }
