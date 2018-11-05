@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'nosetests --cover-html-dir=./tmp && ls' 
+                sh 'nosetests --with-coverage --cover-html-dir=./tmp && ls' 
             }
         }
     }
