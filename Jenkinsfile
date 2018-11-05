@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'nosetests --xunit-file && ls' 
+                sh 'nosetests --with-xunit'
+                sh 'ls'
             }
         }
     }
